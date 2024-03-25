@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+
+//地址传递
+void mySawp01(int *a, int *b)
+{
+
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+
+}
+//
+// 引用语法 
+//int a= 10；
+//int& b = a;
+
+//引用传递
+void mySwap02(int& a, int& b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
+
+
+}
+
+int main()
+{
+	int a = 15;
+	int b = 23;
+	/*mySawp01(&a, &b);
+
+	cout << "a=" << a << endl;
+	cout << "b=" << b << endl;*/
+
+	mySwap02(a, b);
+	cout << "Swap02 a=" << a << endl;
+	cout << "Swap02 b=" << b << endl;
+
+	system("pause");
+	return 0;
+
+}
